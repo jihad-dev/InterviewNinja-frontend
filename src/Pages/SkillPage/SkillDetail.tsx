@@ -15,7 +15,7 @@ type Question = {
 const SkillDetail: React.FC = () => {
     const { name } = useParams<{ name: string }>();
     const { data, isLoading, error } = useGetQuestionsByCategoryQuery(name);
-    const [visibleCount, setVisibleCount] = useState(3);
+    const [visibleCount, setVisibleCount] = useState(5);
 
     if (isLoading) return <Loader />;
     if (error) return <div className="text-center text-red-500 font-semibold mt-10">Error loading questions.</div>;

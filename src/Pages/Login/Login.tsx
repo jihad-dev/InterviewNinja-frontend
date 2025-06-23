@@ -37,6 +37,7 @@ const Login = () => {
       const user = await verifyToken(res?.data?.accessToken || "");
       dispatch(setUser({ user: user, token: res?.data?.accessToken || "" }));
       toast.success("Logged in successfully", { id: toastId });
+      toast.dismiss()
       navigate("/");
     } catch (error: any) {
       
