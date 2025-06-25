@@ -25,6 +25,7 @@ import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import SkillDetail from "../Pages/SkillPage/SkillDetail";
 import QuestionForm from "../Pages/AdminPage/AddQuestion";
+import AllQuestions from "../Pages/AdminPage/AllQuestions";
 
 export const router = createBrowserRouter([
   {
@@ -79,8 +80,8 @@ export const router = createBrowserRouter([
         element:<PrivateRoute allowedRoles={["admin"]}><AdminHome/></PrivateRoute>
       },
       {
-        path: "/dashboard/products",
-        // element: <PrivateRoute allowedRoles={["admin"]}><AllProducts/></PrivateRoute>
+        path: "/dashboard/all-questions",
+        element: <PrivateRoute allowedRoles={["admin"]}><AllQuestions/></PrivateRoute>
       },
       {
         path: "/dashboard/customers",

@@ -40,7 +40,7 @@ const StatCard = ({ icon, label, value, trend, color }: any) => (
 );
 
 // ActionButton Component
-const ActionButton = ({ icon, label, to }: any) => (
+const ActionButton = ({ icon, label, to ,className = ""}: any) => (
   <Link to={to} className="flex-1 min-w-[100px]">
     <button className="w-full flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition">
       <span className="text-2xl text-blue-600 mb-1">{icon}</span>
@@ -135,10 +135,10 @@ const AdminHome = () => {
       {/* Quick Actions */}
       <div>
         <h2 className="text-lg font-semibold mb-3 text-gray-700">Quick Actions</h2>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <ActionButton icon={<FiPlus />} label="Add Question" to="/dashboard/questions/add" />
-          <ActionButton icon={<FiClipboard />} label="Review Interviews" to="/dashboard/interviews" />
-          <ActionButton icon={<FiUsers />} label="Manage Users" to="/dashboard/users" />
+        <div className="flex flex-col sm:flex-row gap-4 ">
+          <ActionButton className="cursor-pointer"  icon={<FiPlus />} label="Add Question" to="/dashboard/question/add-question" />
+          <ActionButton className="cursor-pointer" icon={<FiClipboard />} label="Review Interviews" to="/dashboard/interviews" />
+          <ActionButton className="cursor-pointer" icon={<FiUsers />} label="Manage Users" to="/dashboard/customers" />
         </div>
       </div>
 

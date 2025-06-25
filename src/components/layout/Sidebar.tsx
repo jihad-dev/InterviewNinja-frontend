@@ -102,11 +102,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isMobile, isOpen, onClose }) => {
       label: "Dashboard",
     },
     {
-      to: "/dashboard/question",
+      to: "/dashboard/all-questions",
       icon: <Package size={20} />,
       label: "Question",
       children: [
-        { to: "/dashboard/question", label: "All Question" },
+        { to: "/dashboard/all-questions", label: "All Question" },
         { to: "/dashboard/question/add-question", label: "Add Question" },
       ],
     },
