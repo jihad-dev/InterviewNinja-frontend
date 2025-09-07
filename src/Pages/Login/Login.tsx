@@ -37,10 +37,19 @@ const Login = () => {
       const user = await verifyToken(res?.data?.accessToken || "");
       dispatch(setUser({ user: user, token: res?.data?.accessToken || "" }));
       toast.success("Logged in successfully", { id: toastId });
-      toast.dismiss()
-      navigate("/");
+      toast.dismiss();
+
+      // Role-based navigation
+      // Assuming user object has a 'role' property (e.g., 'admin', 'user', etc.)
+      if (user?.role === "admin") {
+        navigate("/dashboard/admin-home");
+      } else if (user?.role === "user") {
+        navigate("/");
+      } else {
+        // Default fallback
+        navigate("/");
+      }
     } catch (error: any) {
-      
       toast.error(error?.message || "An unknown error occurred");
     }
   };

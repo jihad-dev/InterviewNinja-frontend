@@ -1,8 +1,8 @@
-import { jwtDecode } from 'jwt-decode'
+import { jwtDecode, JwtPayload } from 'jwt-decode'
+import type { IUser } from '../types/user.types'
 
-const verifyToken = async (token: string) => {
-
-    return jwtDecode(token);
+const verifyToken = async (token: string): Promise<IUser & JwtPayload> => {
+    return jwtDecode<IUser & JwtPayload>(token)
 }
 
-export default verifyToken;
+export default verifyToken

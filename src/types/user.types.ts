@@ -6,5 +6,6 @@ export interface IUser {
   phone?: string;
   address?: string;
   role: 'user' | 'admin'; 
-  
+  status: 'active' | 'inactive';
+  isDeleted: boolean;
 } 
