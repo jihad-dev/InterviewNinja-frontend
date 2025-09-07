@@ -16,17 +16,10 @@ const recentActivities = [
   { id: 3, text: 'New user registered', time: '1 hour ago' },
 ];
 
-// Placeholder chart data
-const chartData = [
-  { name: 'Jan', value: 30 },
-  { name: 'Feb', value: 45 },
-  { name: 'Mar', value: 60 },
-  { name: 'Apr', value: 50 },
-  { name: 'May', value: 80 },
-];
+// Placeholder chart data removed (unused)
 
 // StatCard Component
-const StatCard = ({ icon, label, value, trend, color }: any) => (
+const StatCard = ({ icon, label, value, trend }: any) => (
   <div className={`bg-white rounded-2xl shadow p-5 hover:shadow-lg transition-all`}>
     <div className="flex items-center justify-between mb-3">
       <div className="text-3xl text-blue-600">{icon}</div>
@@ -68,7 +61,7 @@ const ActivityTimeline = ({ activities }: any) => (
 );
 
 // Placeholder Chart Component
-const PerformanceChart = ({ data }: any) => (
+const PerformanceChart = () => (
   <div className="h-48 flex items-center justify-center bg-gray-100 rounded-xl">
     <span className="text-gray-400">[Chart Placeholder]</span>
   </div>
@@ -109,7 +102,6 @@ const AdminHome = () => {
             label="Total Users"
             value={userCount}
             trend="+8%"
-            color="from-purple-500 to-pink-500"
           />
         </Link>
         <StatCard
@@ -147,7 +139,7 @@ const AdminHome = () => {
         <ActivityTimeline activities={recentActivities} />
         <div className="bg-white rounded-2xl shadow-md p-6">
           <h2 className="text-xl font-semibold mb-4">Platform Analytics</h2>
-          <PerformanceChart data={chartData} />
+          <PerformanceChart />
         </div>
       </div>
     </div>
