@@ -30,7 +30,7 @@ const AllQuestions = () => {
     const questions = data?.questions || [];
 
     // Delete (Demo placeholder)
-    const handleDelete = async (question: Question) => {
+    const handleDelete = async (_q: Question) => {
         Swal.fire({
             title: 'Confirm Delete',
             text: 'Are you sure you want to delete this?',

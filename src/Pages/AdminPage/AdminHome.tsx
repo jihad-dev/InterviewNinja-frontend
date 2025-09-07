@@ -40,7 +40,7 @@ const StatCard = ({ icon, label, value, trend, color }: any) => (
 );
 
 // ActionButton Component
-const ActionButton = ({ icon, label, to ,className = ""}: any) => (
+const ActionButton = ({ icon, label, to}: any) => (
   <Link to={to} className="flex-1 min-w-[100px]">
     <button className="w-full flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow hover:bg-blue-50 transition">
       <span className="text-2xl text-blue-600 mb-1">{icon}</span>
