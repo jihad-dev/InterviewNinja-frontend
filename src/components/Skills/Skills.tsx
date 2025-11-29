@@ -18,6 +18,8 @@ const skills = [
     { name: "Tailwind CSS", value: 85 },
     { name: "Git & GitHub", value: 90 },
     { name: "Docker", value: 50 },
+    { name: "C++", value: 80 },
+    { name: "C", value: 90 },
 ];
 
 const maxValue = 100;
